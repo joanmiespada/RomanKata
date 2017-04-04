@@ -6,7 +6,17 @@ package RomanKata
 import org.scalatest._
 
 class Tests extends UnitSpec {
-  info("Starting")
+
+  "test 0" should "get Exception" in {
+    val Rk = new RomanKata()
+    try {
+      Rk.roman("0")
+    }catch {
+      case e: Exception => {
+        assert(true)
+      }
+    }
+  }
 
   "test 1" should "first item: I" in {
 
@@ -16,10 +26,9 @@ class Tests extends UnitSpec {
 
     assert(res === "I")
 
-    info("ok")
   }
 
-  "test 2" should "first item: II" in {
+  "test 2" should "second item: II" in {
 
     val Rk = new RomanKata()
 
@@ -27,10 +36,9 @@ class Tests extends UnitSpec {
 
     assert(res === "II")
 
-    info("ok")
   }
 
-  "test 3" should "first item: III" in {
+  "test 3" should "third item: III" in {
 
     val Rk = new RomanKata()
 
@@ -38,9 +46,8 @@ class Tests extends UnitSpec {
 
     assert(res === "III")
 
-    info("ok")
   }
-  "test 4" should "fifth item: V" in {
+  "test 5" should "forth item: V" in {
 
     val Rk = new RomanKata()
 
@@ -48,9 +55,15 @@ class Tests extends UnitSpec {
 
     assert(res === "V")
 
-    info("ok")
+  }
+  "test 10" should "fifth item: X" in {
+
+    val Rk = new RomanKata()
+
+    val res = Rk.roman("10")
+
+    assert(res === "X")
+
   }
 
-
-  info("End")
 }
