@@ -56,14 +56,24 @@ class Tests extends UnitSpec {
     assert(res === "V")
 
   }
-  "test 10" should "fifth item: X" in {
+  "test 1x" should "fifth item: Xx" in {
 
     val Rk = new RomanKata()
 
-    val res = Rk.roman("10")
+    var res:String = ""
+    res = Rk.roman("10"); assert(res === "X")
+    res = Rk.roman("11"); assert(res === "XI")
+    res = Rk.roman("19"); assert(res === "XIX")
 
-    assert(res === "X")
+  }
+  "test full" should "diferent solucions" in {
 
+    val Rk = new RomanKata()
+
+    var res:String = ""
+    res = Rk.roman("110"); assert(res === "CX")
+    res = Rk.roman("58"); assert(res === "LVIII")
+    res = Rk.roman("352"); assert(res === "CCCLII")
   }
 
 }
