@@ -1,2 +1,2 @@
 # RomanKata
-Roman Numbers Kata implementation
+My implementation of Roman Numbers Kata in Scala
